@@ -70,6 +70,11 @@ button {
   text-align: center;
 }
 
+.button_gray {
+  background-color: #F3F4F6;
+  color: #1F2937;
+}
+
 .button_red {
   background-color: #FEE2E2;
   color: #991B1B;
@@ -101,8 +106,8 @@ button {
 }
 
 .button_pink {
-  background-color: #9D174D;
-  color: #FCE7F3;
+  background-color: #FCE7F3;
+  color: #9D174D;
 }
 
 .button_pill {
@@ -117,3 +122,4 @@ button {
   width: 5rem;
   height: 2rem;
 }
+

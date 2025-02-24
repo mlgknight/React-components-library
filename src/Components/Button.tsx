@@ -1,20 +1,22 @@
-import "../index.css"
+import '../index.css';
 
-interface ButtonProps {
-    children: React.ReactNode,
-    color: string,
-    type: string
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+	children: React.ReactNode;
+	color: string;
+	variant: string;
 }
 
 export default function Button(props: ButtonProps) {
-    const { children, color, type } = props
-
-    const colorClass = "button_"  + color
-    const typeClass = "button_" + type
+	const { children, color, variant, className, ...rest } = props;
 
 
 
-    return (
-        <button className={`${colorClass} ${typeClass}`}>{children}</button>
-    )
+	const colorClass = 'button_' + color;
+    const variantClass = 'button_' + variant;
+
+	return (
+		<button {...rest} className={`${colorClass} ${variantClass} ${className}`}>
+			{children}
+		</button>
+	);
 }

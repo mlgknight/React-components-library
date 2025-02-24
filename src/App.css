@@ -8,5 +8,6 @@ body {
   flex-wrap: wrap;
   flex-direction: row;
   align-content: left;
+  justify-content: left;
   gap: 5rem;
 }
