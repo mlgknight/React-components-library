@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(139, 136, 136);
+  padding: 1.5rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: left;
+  gap: 5rem;
+}

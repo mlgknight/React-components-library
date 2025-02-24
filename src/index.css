@@ -1,0 +1,119 @@
+.card {
+  width: 384px;
+  height: 208px;
+  padding-right: 24px;
+  padding-bottom: 32px;
+  padding-left: 24px;
+  border-radius: 8px;
+  background-color: #F9FAFB;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+}
+
+.card_icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  color: white;
+}
+
+.card div {
+  width: 48px;
+  height: 48px;
+  border-radius: 6px;
+  background-color: #3F75FE;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -12%;
+  cursor: pointer;
+}
+
+.card p {
+  font-family: Inter;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  text-align: center;
+
+}
+
+.card h3 {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  text-align: center;
+
+}
+
+button {
+  width: 5rem;
+  height: 2rem;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  background-color: #F3F4F6;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+}
+
+.button_red {
+  background-color: #FEE2E2;
+  color: #991B1B;
+}
+
+.button_yellow {
+  background-color: #FEF3C7;
+  color: #92400E;
+}
+
+.button_green {
+  background-color: #D1FAE5;
+  color: #065F46;
+}
+
+.button_blue {
+  background-color: #DBEAFE;
+  color: #1E40AF;
+}
+
+.button_indigo {
+  background-color: #E0E7FF;
+  color: #3730A3;
+}
+
+.button_purple {
+  background-color: #EDE9FE;
+  color: #5B21B6;
+}
+
+.button_pink {
+  background-color: #9D174D;
+  color: #FCE7F3;
+}
+
+.button_pill {
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+.button_square {
+  width: 5rem;
+  height: 2rem;
+}
