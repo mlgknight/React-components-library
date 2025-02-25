@@ -1,8 +1,7 @@
 import Card from './Components/Card';
 import Button from './Components/Button';
 import { BsCloudUpload } from 'react-icons/bs';
-import Tooltip from "./Components/Tooltip"
-import { FiInbox } from "react-icons/fi";
+import Tooltip from './Components/Tooltip';
 
 import './App.css';
 function App() {
@@ -14,13 +13,17 @@ function App() {
 	};
 
 	const buttonProps = {
-		variant: 'square',
-		color: 'yellow',
+		variant: 'pill',
+		color: 'indigo',
+		colorType: "dark",
 	};
 
 	const toolTipProps = {
-		icon: <FiInbox />,
-		header_text: "Archive notes",
+		header_text: 'Archive notes',
+		// gray, red, yellow, green, blue, indigo, purple, pink
+		color: "indigo",
+		// dark or light
+		colorType: "dark",
 	};
 
 	return (
@@ -31,7 +34,10 @@ function App() {
 			</Card>
 			<Button {...buttonProps}>Badge</Button>
 
-			<Tooltip {...toolTipProps} >Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum tenetur.</Tooltip>
+			<Tooltip {...toolTipProps}>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum
+				tenetur.
+			</Tooltip>
 		</div>
 	);
 }

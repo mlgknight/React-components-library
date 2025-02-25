@@ -70,44 +70,116 @@ button {
   text-align: center;
 }
 
-.button_gray {
-  background-color: #F3F4F6;
-  color: #1F2937;
+.tooltip_class {
+  display: flex;
+  width: 384px;
+  height: 98px;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #FFFFFF;
+  flex-direction: column;
 }
 
-.button_red {
-  background-color: #FEE2E2;
-  color: #991B1B;
+:root {
+  --gray: #F3F4F6;
+  --red: #FEE2E2;
+  --yellow: #FEF3C7;
+  --green: #D1FAE5;
+  --blue: #DBEAFE;
+  --indigo: #E0E7FF;
+  --purple: #EDE9FE;
+  --pink: #FCE7F3;
+  --dark-gray: #262626;
+  --dark-red: #991B1B;
+  --dark-yellow: #92400E;
+  --dark-green: #47AA5D;
+  --dark-blue: #1E40AF;
+  --dark-indigo: #3730A3;
+  --dark-purple: #A9229B;
+  --dark-pink: #9D174D;
 }
 
-.button_yellow {
-  background-color: #FEF3C7;
-  color: #92400E;
+
+/* Color Classes */
+.bg_gray {
+  background-color: var(--gray);
+  color: var(--dark-gray);
 }
 
-.button_green {
-  background-color: #D1FAE5;
-  color: #065F46;
+.bg_red {
+  background-color: var(--red);
+  color: var(--dark-red);
 }
 
-.button_blue {
-  background-color: #DBEAFE;
-  color: #1E40AF;
+.bg_yellow {
+  background-color: var(--yellow);
+  color: var(--dark-yellow);
 }
 
-.button_indigo {
-  background-color: #E0E7FF;
-  color: #3730A3;
+.bg_green {
+  background-color: var(--green);
+  color: var(--dark-green);
 }
 
-.button_purple {
-  background-color: #EDE9FE;
-  color: #5B21B6;
+.bg_blue {
+  background-color: var(--blue);
+  color: var(--dark-blue);
 }
 
-.button_pink {
-  background-color: #FCE7F3;
-  color: #9D174D;
+.bg_indigo {
+  background-color: var(--indigo);
+  color: var(--dark-indigo);
+}
+
+.bg_purple {
+  background-color: var(--purple);
+  color: var(--dark-purple);
+}
+
+.bg_pink {
+  background-color: var(--pink);
+  color: var(--dark-pink);
+}
+
+/* Darker Color Classes */
+.bg_dark_gray {
+  background-color: var(--dark-gray);
+  color: var(--gray);
+}
+
+.bg_dark_red {
+  background-color: var(--dark-red);
+  color: var(--red);
+}
+
+.bg_dark_yellow {
+  background-color: var(--dark-yellow);
+  color: var(--yellow);
+}
+
+.bg_dark_green {
+  background-color: var(--dark-green);
+  color: var(--green);
+}
+
+.bg_dark_blue {
+  background-color: var(--dark-blue);
+  color: var(--blue);
+}
+
+.bg_dark_indigo {
+  background-color: var(--dark-indigo);
+  color: var(--indigo);
+}
+
+.bg_dark_purple {
+  background-color: var(--dark-purple);
+  color: var (--purple);
+}
+
+.bg_dark_pink {
+  background-color: var(--dark-pink);
+  color: var(--pink);
 }
 
 .button_pill {
@@ -121,5 +193,63 @@ button {
 .button_square {
   width: 5rem;
   height: 2rem;
+}
+
+.tooltip_class h3 {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+
+}
+
+.tooltip_class p {
+  font-family: Inter;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  margin-left: 2.5rem;
+  margin-top: 0;
+}
+
+.close_button {
+  font-size: 1.5rem;
+  color: #6B7280;
+  cursor: pointer;
+}
+
+.tooltip_icon {
+  width: 24px;
+  height: 24px;
+  color: #6B7280;
+
+}
+
+.tooltip_close_icon {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.tooltip_header_icon_container {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tooltip_triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid; /* Color will be set dynamically */
+  left: 50%; /* Center the triangle horizontally */
+  bottom: -10px; /* Position the triangle below the tooltip */
+  transform: translateX(-50%);
 }
 

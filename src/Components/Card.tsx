@@ -3,7 +3,7 @@ import '../index.css';
 interface CardProps {
 	children: React.ReactNode;
 	header_text: string;
-	className: string;
+	className?: string;
 	icon?: React.ReactNode;
 	onClick?: () => void;
 }
