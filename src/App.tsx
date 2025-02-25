@@ -1,7 +1,8 @@
 import Card from './Components/Card';
 import Button from './Components/Button';
-import { BsCloudUpload } from 'react-icons/bs';
 import Tooltip from './Components/Tooltip';
+import Toast from './Components/Toast';
+import { BsCloudUpload } from 'react-icons/bs';
 
 import './App.css';
 function App() {
@@ -9,25 +10,31 @@ function App() {
 		onClick: () => console.log('Card clicked'),
 		header_text: 'Easy Deployment',
 		className: '',
-		icon: <BsCloudUpload className="card_icon" />,
+		icon: <BsCloudUpload className='card_icon' />,
 	};
 
 	const buttonProps = {
 		variant: 'pill',
-		color: 'indigo',
-		colorType: "dark",
+		color: 'blue',
+		colorType: 'dark',
 	};
 
 	const toolTipProps = {
 		header_text: 'Archive notes',
 		// gray, red, yellow, green, blue, indigo, purple, pink
-		color: "indigo",
+		color: 'blue',
 		// dark or light
-		colorType: "dark",
+		colorType: 'dark',
+	};
+
+	const ToastProps = {
+		// success, warning, error, info
+		variant: 'info',
+		children: 'Your work has been saved',
 	};
 
 	return (
-		<div className="container">
+		<div className='container'>
 			<Card {...cardProps}>
 				Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna
 				sit morbi lobortis.
@@ -38,6 +45,7 @@ function App() {
 				Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum
 				tenetur.
 			</Tooltip>
+			<Toast {...ToastProps}></Toast>
 		</div>
 	);
 }

@@ -1,255 +1,327 @@
-.card {
-  width: 384px;
-  height: 208px;
-  padding-right: 24px;
-  padding-bottom: 32px;
-  padding-left: 24px;
-  border-radius: 8px;
-  background-color: #F9FAFB;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-
-}
-
-.card_icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 6px;
-  color: white;
-}
-
-.card div {
-  width: 48px;
-  height: 48px;
-  border-radius: 6px;
-  background-color: #3F75FE;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: -12%;
-  cursor: pointer;
-}
-
-.card p {
-  font-family: Inter;
-  font-weight: 200;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0%;
-  text-align: center;
-
-}
-
-.card h3 {
-  font-family: Inter;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
-  letter-spacing: 0%;
-  text-align: center;
-
-}
-
-button {
-  width: 5rem;
-  height: 2rem;
-  border-radius: 4px;
-  text-align: center;
-  cursor: pointer;
-  border: none;
-  background-color: #F3F4F6;
-  font-family: Inter;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0%;
-  text-align: center;
-}
-
-.tooltip_class {
-  display: flex;
-  width: 384px;
-  height: 98px;
-  border-radius: 8px;
-  padding: 16px;
-  background-color: #FFFFFF;
-  flex-direction: column;
-}
+/*Color Variables section */
 
 :root {
-  --gray: #F3F4F6;
-  --red: #FEE2E2;
-  --yellow: #FEF3C7;
-  --green: #D1FAE5;
-  --blue: #DBEAFE;
-  --indigo: #E0E7FF;
-  --purple: #EDE9FE;
-  --pink: #FCE7F3;
-  --dark-gray: #262626;
-  --dark-red: #991B1B;
-  --dark-yellow: #92400E;
-  --dark-green: #47AA5D;
-  --dark-blue: #1E40AF;
-  --dark-indigo: #3730A3;
-  --dark-purple: #A9229B;
-  --dark-pink: #9D174D;
+	--gray: #f3f4f6;
+	--red: #fee2e2;
+	--yellow: #fef3c7;
+	--green: #d1fae5;
+	--blue: #dbeafe;
+	--indigo: #e0e7ff;
+	--purple: #ede9fe;
+	--pink: #fce7f3;
+	--dark-gray: #262626;
+	--dark-red: #991b1b;
+	--dark-yellow: #92400e;
+	--dark-green: #47aa5d;
+	--dark-blue: #1e40af;
+	--dark-indigo: #3730a3;
+	--dark-purple: #a9229b;
+	--dark-pink: #9d174d;
+  --icon-green: #34D399;
+  --icon-yellow: #FBBF24;
+  --icon-red: #F87171;
+  --icon-blue: #60A5FA;
 }
 
+/*Tooltip section */
 
-/* Color Classes */
-.bg_gray {
-  background-color: var(--gray);
-  color: var(--dark-gray);
-}
-
-.bg_red {
-  background-color: var(--red);
-  color: var(--dark-red);
-}
-
-.bg_yellow {
-  background-color: var(--yellow);
-  color: var(--dark-yellow);
-}
-
-.bg_green {
-  background-color: var(--green);
-  color: var(--dark-green);
-}
-
-.bg_blue {
-  background-color: var(--blue);
-  color: var(--dark-blue);
-}
-
-.bg_indigo {
-  background-color: var(--indigo);
-  color: var(--dark-indigo);
-}
-
-.bg_purple {
-  background-color: var(--purple);
-  color: var(--dark-purple);
-}
-
-.bg_pink {
-  background-color: var(--pink);
-  color: var(--dark-pink);
-}
-
-/* Darker Color Classes */
-.bg_dark_gray {
-  background-color: var(--dark-gray);
-  color: var(--gray);
-}
-
-.bg_dark_red {
-  background-color: var(--dark-red);
-  color: var(--red);
-}
-
-.bg_dark_yellow {
-  background-color: var(--dark-yellow);
-  color: var(--yellow);
-}
-
-.bg_dark_green {
-  background-color: var(--dark-green);
-  color: var(--green);
-}
-
-.bg_dark_blue {
-  background-color: var(--dark-blue);
-  color: var(--blue);
-}
-
-.bg_dark_indigo {
-  background-color: var(--dark-indigo);
-  color: var(--indigo);
-}
-
-.bg_dark_purple {
-  background-color: var(--dark-purple);
-  color: var (--purple);
-}
-
-.bg_dark_pink {
-  background-color: var(--dark-pink);
-  color: var(--pink);
-}
-
-.button_pill {
-  border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -moz-border-radius: 100px;
-  -ms-border-radius: 100px;
-  -o-border-radius: 100px;
-}
-
-.button_square {
-  width: 5rem;
-  height: 2rem;
+.tooltip_class {
+	display: flex;
+	width: 384px;
+	height: 98px;
+	border-radius: 8px;
+	padding: 16px;
+	background-color: #ffffff;
+	flex-direction: column;
 }
 
 .tooltip_class h3 {
-  font-family: Inter;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0%;
-
+	font-family: Inter;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0%;
 }
 
 .tooltip_class p {
-  font-family: Inter;
-  font-weight: 200;
-  font-size: 14px;
-  line-height: 20px;
-  letter-spacing: 0%;
-  margin-left: 2.5rem;
-  margin-top: 0;
+	font-family: Inter;
+	font-weight: 200;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0%;
+	margin-left: 2.5rem;
+	margin-top: 0;
 }
 
 .close_button {
-  font-size: 1.5rem;
-  color: #6B7280;
-  cursor: pointer;
+	font-size: 1.5rem;
+	color: #6b7280;
+	cursor: pointer;
 }
 
 .tooltip_icon {
-  width: 24px;
-  height: 24px;
-  color: #6B7280;
-
+	width: 24px;
+	height: 24px;
+	color: #6b7280;
 }
 
 .tooltip_close_icon {
-  display: flex;
-  flex-direction: row;
-  align-items: start;
-  justify-content: space-between;
+	display: flex;
+	flex-direction: row;
+	align-items: start;
+	justify-content: space-between;
 }
 
 .tooltip_header_icon_container {
-  justify-content: space-between;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+	justify-content: space-between;
+	display: flex;
+	align-items: center;
+	gap: 1rem;
 }
 
 .tooltip_triangle {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid; /* Color will be set dynamically */
-  left: 50%; /* Center the triangle horizontally */
-  bottom: -10px; /* Position the triangle below the tooltip */
-  transform: translateX(-50%);
+	position: relative;
+	width: 0;
+	height: 0;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	border-top: 15px solid; /* Color will be set dynamically */
+	left: 20%; /* Center the triangle horizontally */
+	bottom: -10px; /* Position the triangle below the tooltip */
+	transform: translateX(-50%);
 }
+
+/* Card Section */
+
+.card {
+	width: 384px;
+	height: 208px;
+	padding-right: 24px;
+	padding-bottom: 32px;
+	padding-left: 24px;
+	border-radius: 8px;
+	background-color: #f9fafb;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.card_icon {
+	width: 24px;
+	height: 24px;
+	border-radius: 6px;
+	color: white;
+}
+
+.card div {
+	width: 48px;
+	height: 48px;
+	border-radius: 6px;
+	background-color: #3f75fe;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	top: -12%;
+	cursor: pointer;
+}
+
+.card p {
+	font-family: Inter;
+	font-weight: 200;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0%;
+	text-align: center;
+}
+
+.card h3 {
+	font-family: Inter;
+	font-weight: 500;
+	font-size: 18px;
+	line-height: 28px;
+	letter-spacing: 0%;
+	text-align: center;
+}
+
+
+/*Toast section */
+
+.toast_icon.success {
+	color: var(--icon-green);
+}
+
+.toast_icon.warning {
+	color: var(--icon-yellow);
+}
+
+.toast_icon.error {
+	color: var(--icon-red);
+}
+
+.toast_icon.info {
+	color: var(--icon-blue);
+}
+
+.toast {
+	width: 22rem;
+	height: 6rem;
+	border-radius: 8px;
+	padding: 0.1rem 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	justify-content: center;
+}
+
+.toast div {
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	gap: 1rem;
+}
+
+.toast div h3 {
+	font-family: Inter;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0%;
+}
+
+.toast_text {
+	text-align: start;
+	font-family: Inter;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0%;
+	margin: 0 0 0 2rem;
+}
+
+.toast_icon {
+	width: 18px;
+	height: 18px;
+	top: 3px;
+	left: 3px;
+	border-width: 2px;
+}
+
+/* Color Classes */
+.bg_gray {
+	background-color: var(--gray);
+	color: var(--dark-gray);
+}
+
+.bg_red {
+	background-color: var(--red);
+	color: var(--dark-red);
+}
+
+.bg_yellow {
+	background-color: var(--yellow);
+	color: var(--dark-yellow);
+}
+
+.bg_green {
+	background-color: var(--green);
+	color: var(--dark-green);
+}
+
+.bg_blue {
+	background-color: var(--blue);
+	color: var(--dark-blue);
+}
+
+.bg_indigo {
+	background-color: var(--indigo);
+	color: var(--dark-indigo);
+}
+
+.bg_purple {
+	background-color: var(--purple);
+	color: var(--dark-purple);
+}
+
+.bg_pink {
+	background-color: var(--pink);
+	color: var(--dark-pink);
+}
+
+
+/* Darker Color Classes */
+.bg_dark_gray {
+	background-color: var(--dark-gray);
+	color: var(--gray);
+}
+
+.bg_dark_red {
+	background-color: var(--dark-red);
+	color: var(--red);
+}
+
+.bg_dark_yellow {
+	background-color: var(--dark-yellow);
+	color: var(--yellow);
+}
+
+.bg_dark_green {
+	background-color: var(--dark-green);
+	color: var(--green);
+}
+
+.bg_dark_blue {
+	background-color: var(--dark-blue);
+	color: var(--blue);
+}
+
+.bg_dark_indigo {
+	background-color: var(--dark-indigo);
+	color: var(--indigo);
+}
+
+.bg_dark_purple {
+	background-color: var(--dark-purple);
+	color: var (--purple);
+}
+
+.bg_dark_pink {
+	background-color: var(--dark-pink);
+	color: var(--pink);
+}
+
+/*Button section */
+
+button {
+	width: 5rem;
+	height: 2rem;
+	border-radius: 4px;
+	text-align: center;
+	cursor: pointer;
+	border: none;
+	background-color: #f3f4f6;
+	font-family: Inter;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 20px;
+	letter-spacing: 0%;
+	text-align: center;
+}
+
+.button_pill {
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-ms-border-radius: 100px;
+	-o-border-radius: 100px;
+}
+
+.button_square {
+	width: 5rem;
+	height: 2rem;
+}
+
 
