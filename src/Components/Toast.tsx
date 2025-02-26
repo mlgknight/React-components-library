@@ -5,7 +5,6 @@ import { HiOutlineInformationCircle } from 'react-icons/hi';
 import { VscError } from 'react-icons/vsc';
 
 interface ToastProps {
-	children: React.ReactNode;
 	variant: string;
 }
 
@@ -26,7 +25,9 @@ export default function Toast(props: ToastProps) {
 		cardText = 'Warning';
 		colorClass = 'yellow';
 		cardInner = 'A network error was detected';
-		iconholder = <RiErrorWarningLine className='toast_icon toast_icon warning' />;
+		iconholder = (
+			<RiErrorWarningLine className='toast_icon toast_icon warning' />
+		);
 	} else if (variant === 'error') {
 		cardText = 'Error';
 		colorClass = 'red';
@@ -36,7 +37,9 @@ export default function Toast(props: ToastProps) {
 		cardText = 'Information';
 		colorClass = 'blue';
 		cardInner = 'Please read updated information';
-		iconholder = <HiOutlineInformationCircle className='toast_icon toast_icon info' />;
+		iconholder = (
+			<HiOutlineInformationCircle className='toast_icon toast_icon info' />
+		);
 	} else {
 		throw new Error('Invalid variant');
 	}

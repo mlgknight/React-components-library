@@ -2,6 +2,7 @@ import Card from './Components/Card';
 import Button from './Components/Button';
 import Tooltip from './Components/Tooltip';
 import Toast from './Components/Toast';
+import Banner from './Components/Banner';
 import { BsCloudUpload } from 'react-icons/bs';
 
 import './App.css';
@@ -16,7 +17,7 @@ function App() {
 	const buttonProps = {
 		variant: 'pill',
 		color: 'blue',
-		colorType: 'dark',
+		colorType: 'light',
 	};
 
 	const toolTipProps = {
@@ -24,13 +25,18 @@ function App() {
 		// gray, red, yellow, green, blue, indigo, purple, pink
 		color: 'blue',
 		// dark or light
-		colorType: 'dark',
+		colorType: 'light',
 	};
 
 	const ToastProps = {
 		// success, warning, error, info
 		variant: 'info',
-		children: 'Your work has been saved',
+	};
+
+	const BannerProps = {
+		color: 'blue',
+		variant: 'success',
+		className: '',
 	};
 
 	return (
@@ -46,6 +52,7 @@ function App() {
 				tenetur.
 			</Tooltip>
 			<Toast {...ToastProps}></Toast>
+			<Banner {...BannerProps}></Banner>
 		</div>
 	);
 }

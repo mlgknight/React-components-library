@@ -17,20 +17,20 @@
 	--dark-indigo: #3730a3;
 	--dark-purple: #a9229b;
 	--dark-pink: #9d174d;
-  --icon-green: #34D399;
-  --icon-yellow: #FBBF24;
-  --icon-red: #F87171;
-  --icon-blue: #60A5FA;
+	--icon-green: #34d399;
+	--icon-yellow: #fbbf24;
+	--icon-red: #f87171;
+	--icon-blue: #60a5fa;
 }
 
 /*Tooltip section */
 
 .tooltip_class {
 	display: flex;
-	width: 384px;
-	height: 98px;
-	border-radius: 8px;
-	padding: 16px;
+	width: 24rem;
+	height: 6.125rem;
+	border-radius: 0.5rem;
+	padding: 1rem;
 	background-color: #ffffff;
 	flex-direction: column;
 }
@@ -38,16 +38,16 @@
 .tooltip_class h3 {
 	font-family: Inter;
 	font-weight: 500;
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
 	letter-spacing: 0%;
 }
 
 .tooltip_class p {
 	font-family: Inter;
 	font-weight: 200;
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
 	letter-spacing: 0%;
 	margin-left: 2.5rem;
 	margin-top: 0;
@@ -60,8 +60,8 @@
 }
 
 .tooltip_icon {
-	width: 24px;
-	height: 24px;
+	width: 1.5rem;
+	height: 1.5rem;
 	color: #6b7280;
 }
 
@@ -83,43 +83,43 @@
 	position: relative;
 	width: 0;
 	height: 0;
-	border-left: 15px solid transparent;
-	border-right: 15px solid transparent;
-	border-top: 15px solid; /* Color will be set dynamically */
-	left: 20%; /* Center the triangle horizontally */
-	bottom: -10px; /* Position the triangle below the tooltip */
+	border-left: 0.9375rem solid transparent;
+	border-right: 0.9375rem solid transparent;
+	border-top: 0.9375rem solid;
+	left: 20%;
+	bottom: -0.625rem;
 	transform: translateX(-50%);
 }
 
 /* Card Section */
 
 .card {
-	width: 384px;
-	height: 208px;
-	padding-right: 24px;
-	padding-bottom: 32px;
-	padding-left: 24px;
-	border-radius: 8px;
+	width: 24rem;
+	height: 13rem;
+	padding-right: 1.5rem;
+	padding-bottom: 2rem;
+	padding-left: 1.5rem;
+	border-radius: 0.5rem;
 	background-color: #f9fafb;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0rem 0.8125rem 1.6875rem -0.3125rem,
+		rgba(0, 0, 0, 0.3) 0rem 0.5rem 1rem -0.5rem;
 }
 
 .card_icon {
-	width: 24px;
-	height: 24px;
-	border-radius: 6px;
+	width: 1.5rem;
+	height: 1.5rem;
+	border-radius: 0.375rem;
 	color: white;
 }
 
 .card div {
-	width: 48px;
-	height: 48px;
-	border-radius: 6px;
+	width: 3rem;
+	height: 3rem;
+	border-radius: 0.375rem;
 	background-color: #3f75fe;
 	display: flex;
 	justify-content: center;
@@ -132,8 +132,8 @@
 .card p {
 	font-family: Inter;
 	font-weight: 200;
-	font-size: 16px;
-	line-height: 24px;
+	font-size: 1rem;
+	line-height: 1.5rem;
 	letter-spacing: 0%;
 	text-align: center;
 }
@@ -141,12 +141,11 @@
 .card h3 {
 	font-family: Inter;
 	font-weight: 500;
-	font-size: 18px;
-	line-height: 28px;
+	font-size: 1.125rem;
+	line-height: 1.75rem;
 	letter-spacing: 0%;
 	text-align: center;
 }
-
 
 /*Toast section */
 
@@ -169,7 +168,7 @@
 .toast {
 	width: 22rem;
 	height: 6rem;
-	border-radius: 8px;
+	border-radius: 0.5rem;
 	padding: 0.1rem 1rem;
 	display: flex;
 	flex-direction: column;
@@ -187,8 +186,8 @@
 .toast div h3 {
 	font-family: Inter;
 	font-weight: 500;
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
 	letter-spacing: 0%;
 }
 
@@ -196,18 +195,18 @@
 	text-align: start;
 	font-family: Inter;
 	font-weight: 300;
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
 	letter-spacing: 0%;
 	margin: 0 0 0 2rem;
 }
 
 .toast_icon {
-	width: 18px;
-	height: 18px;
-	top: 3px;
-	left: 3px;
-	border-width: 2px;
+	width: 1.125rem;
+	height: 1.125rem;
+	top: 0.1875rem;
+	left: 0.1875rem;
+	border-width: 0.125rem;
 }
 
 /* Color Classes */
@@ -251,7 +250,6 @@
 	color: var(--dark-pink);
 }
 
-
 /* Darker Color Classes */
 .bg_dark_gray {
 	background-color: var(--dark-gray);
@@ -285,7 +283,7 @@
 
 .bg_dark_purple {
 	background-color: var(--dark-purple);
-	color: var (--purple);
+	color: var(--purple);
 }
 
 .bg_dark_pink {
@@ -298,15 +296,15 @@
 button {
 	width: 5rem;
 	height: 2rem;
-	border-radius: 4px;
+	border-radius: 0.25rem;
 	text-align: center;
 	cursor: pointer;
 	border: none;
 	background-color: #f3f4f6;
 	font-family: Inter;
 	font-weight: 500;
-	font-size: 14px;
-	line-height: 20px;
+	font-size: 0.875rem;
+	line-height: 1.25rem;
 	letter-spacing: 0%;
 	text-align: center;
 }
@@ -324,4 +322,41 @@ button {
 	height: 2rem;
 }
 
+/* Banner section */
 
+.banner_class {
+	width: 56rem;
+	height: 5rem;
+	gap: 0.75rem;
+	top: -12rem;
+	left: -57.4375rem;
+	border-radius: 0.375rem;
+	padding: 1rem;
+}
+
+.banner_class_small {
+    width: 54rem;
+    height: 2.5rem;
+    gap: 0.75rem;
+    top: -9.875rem;
+    left: 1.4375rem;
+    border-radius: 0.375rem;
+    padding: 1rem;
+	display: flex;
+}
+
+
+.banner_class div {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+.banner_class p {
+	margin: 0 0 0 2.3rem;
+	font-family: Inter;
+	font-weight: 300;
+	font-size: .9rem;
+	letter-spacing: 0%;
+
+}

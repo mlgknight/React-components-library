@@ -31,7 +31,7 @@ export default function Tooltip(props: TooltipProps) {
 
 	const dynamicStyle = [
 		{
-			borderTopColor: colorType ? `var(--dark-${color})` : `var(--${color})`,
+			borderTopColor: colorType === 'dark' ? `var(--dark-${color})` : `var(--${color})`,
 		},
 		{
 			color: color
