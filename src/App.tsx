@@ -3,7 +3,7 @@ import Button from './Components/Button';
 import Tooltip from './Components/Tooltip';
 import Toast from './Components/Toast';
 import Banner from './Components/Banner';
-import { BsCloudUpload } from 'react-icons/bs';
+import { AiOutlineCodepen } from 'react-icons/ai';
 
 import './App.css';
 function App() {
@@ -11,7 +11,9 @@ function App() {
 		onClick: () => console.log('Card clicked'),
 		header_text: 'Easy Deployment',
 		className: '',
-		icon: <BsCloudUpload className='card_icon' />,
+		icon: <AiOutlineCodepen />,
+		cardColor: 'blue',
+		iconColor: 'blue',
 	};
 
 	const buttonProps = {
@@ -34,8 +36,7 @@ function App() {
 	};
 
 	const BannerProps = {
-		color: 'blue',
-		variant: 'success',
+		variant: 'info',
 		className: '',
 	};
 

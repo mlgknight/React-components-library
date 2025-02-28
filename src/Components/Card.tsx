@@ -1,21 +1,29 @@
 import '../index.css';
+import { CardProps } from '../types/definitions'
 
-interface CardProps {
-	children: React.ReactNode;
-	header_text: string;
-	className?: string;
-	icon?: React.ReactNode;
-	onClick?: () => void;
-}
 
 export default function Card(props: CardProps) {
-	const { className, onClick, icon, header_text, children, ...rest } = props;
+
+	const {
+		iconColor,
+		cardColor,
+		className,
+		onClick,
+		icon,
+		header_text,
+		children,
+		...rest
+	} = props;
 
 	return (
-		<div onClick={onClick} className={`card ${className}`} {...rest}>
-			<div>{icon}</div>
+		<div
+			{...rest}
+			onClick={onClick}
+			className={`card ${className} bg_${cardColor}`}
+		>
+			{icon && <div className={` card_icon bg_${iconColor}`}>{icon}</div>}
 			<h3>{header_text}</h3>
-			<p> {children} </p>
+			<p>{children}</p>
 		</div>
 	);
 }

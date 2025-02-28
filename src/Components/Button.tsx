@@ -1,11 +1,5 @@
 import '../index.css';
-
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	children: React.ReactNode;
-	color: string;
-	variant: string;
-	colorType: string;
-}
+import { ButtonProps } from '../types/definitions';
 
 export default function Button(props: ButtonProps) {
 	const { children, color, variant, colorType, className, ...rest } = props;

@@ -3,15 +3,14 @@ import { FaRegCheckCircle } from 'react-icons/fa';
 import { RiErrorWarningLine } from 'react-icons/ri';
 import { HiOutlineInformationCircle } from 'react-icons/hi';
 import { VscError } from 'react-icons/vsc';
-
-interface ToastProps {
-	variant: string;
-}
+import { ToastProps, colorSelection } from '../types/definitions'
 
 export default function Toast(props: ToastProps) {
 	const { variant, ...rest } = props;
 
-	let colorClass: string = 'green';
+	let colorClass : colorSelection
+
+
 	let cardText: string = 'Success';
 	let cardInner: string = 'Your work has been saved';
 	let iconholder: React.ReactNode = <FaRegCheckCircle className='toast_icon' />;

@@ -1,15 +1,7 @@
 import '../index.css';
 import { CgClose } from 'react-icons/cg';
 import { FiInbox } from 'react-icons/fi';
-
-interface TooltipProps extends React.HTMLAttributes<HTMLDivElement> {
-	children: React.ReactNode;
-	header_text: string;
-	className?: string;
-	icon?: React.ReactNode;
-	color?: string;
-	colorType: string;
-}
+import { TooltipProps } from '../types/definitions';
 
 export default function Tooltip(props: TooltipProps) {
 	const {
@@ -31,7 +23,8 @@ export default function Tooltip(props: TooltipProps) {
 
 	const dynamicStyle = [
 		{
-			borderTopColor: colorType === 'dark' ? `var(--dark-${color})` : `var(--${color})`,
+			borderTopColor:
+				colorType === 'dark' ? `var(--dark-${color})` : `var(--${color})`,
 		},
 		{
 			color: color
