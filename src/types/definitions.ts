@@ -1,5 +1,9 @@
+import React from 'react';
+
 // Define common color types
-export type colorSelection = 'gray' | 'blue' | 'green' | 'red' | 'yellow' | 'purple' | 'indigo' | 'pink';
+export type colorSelection = 'gray' | 'blue' | 'green' | 'red' | 'yellow' | 'indigo' | 'purple' | 'pink';
+export type colorType = 'light' | 'dark';
+export type variantType = 'success' | 'warning' | 'error' | 'info';
 
 // CardProps interface
 export interface CardProps {
@@ -11,36 +15,33 @@ export interface CardProps {
     cardColor: colorSelection;
     iconColor: colorSelection;
 }
-// BannerProps interface
 
+// BannerProps interface
 export interface BannerProps extends React.HTMLAttributes<HTMLDivElement> {
-	children?: React.ReactNode;
-	variant: string;
-	className?: string;
+    children?: React.ReactNode;
+    variant: variantType;
+    className?: string;
 }
 
 // ButtonProps interface
-
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-	children: React.ReactNode;
-	color: 'blue' | 'green' | 'red' | 'yellow' | 'purple' | 'indigo' | 'pink';
-	variant: string;
-	colorType: 'dark' | 'light';
+    children: React.ReactNode;
+    color: colorSelection;
+    variant: variantType;
+    colorType?: colorType;
 }
 
 // TooltipProps interface
-
 export interface TooltipProps extends React.HTMLAttributes<HTMLDivElement> {
-	children: React.ReactNode;
-	header_text: string;
-	className?: string;
-	icon?: React.ReactNode;
-	color?: 'blue' | 'green' | 'red' | 'yellow' | 'purple' | 'indigo' | 'pink';
-	colorType: 'dark' | 'light';
+    children: React.ReactNode;
+    header_text: string;
+    className?: string;
+    icon?: React.ReactNode;
+    color?: colorSelection;
+    colorType: colorType;
 }
 
 // ToastProps interface
-
 export interface ToastProps {
-	variant: string;
+    variant: variantType;
 }

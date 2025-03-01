@@ -6,37 +6,41 @@ import Banner from './Components/Banner';
 import { AiOutlineCodepen } from 'react-icons/ai';
 
 import './App.css';
+import { colorSelection, colorType, variantType } from './types/definitions';
+
 function App() {
+	// Card props
 	const cardProps = {
 		onClick: () => console.log('Card clicked'),
 		header_text: 'Easy Deployment',
 		className: '',
 		icon: <AiOutlineCodepen />,
-		cardColor: 'blue',
-		iconColor: 'blue',
+		cardColor: 'blue' as colorSelection,
+		iconColor: 'blue' as colorSelection,
 	};
 
+	// Button props
 	const buttonProps = {
-		variant: 'pill',
-		color: 'blue',
-		colorType: 'light',
+		variant: 'info' as variantType,
+		color: 'blue' as colorSelection,
+		colorType: 'light' as colorType,
 	};
 
+	// Tooltip props
 	const toolTipProps = {
 		header_text: 'Archive notes',
-		// gray, red, yellow, green, blue, indigo, purple, pink
-		color: 'blue',
-		// dark or light
-		colorType: 'light',
+		color: 'blue' as colorSelection,
+		colorType: 'light' as colorType,
 	};
 
+	// Toast props
 	const ToastProps = {
-		// success, warning, error, info
-		variant: 'info',
+		variant: 'info' as variantType,
 	};
 
+	// Banner props
 	const BannerProps = {
-		variant: 'info',
+		variant: 'info' as variantType,
 		className: '',
 	};
 
