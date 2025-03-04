@@ -21,7 +21,7 @@ export default function Card(props: CardProps) {
 			onClick={onClick}
 			className={`card ${className} bg_${cardColor}`}
 		>
-			{icon && <div className={` card_icon bg_${iconColor}`}>{icon}</div>}
+			{icon && <div className={` card_icon bg_dark_${iconColor}`}>{icon}</div>}
 			<h3>{header_text}</h3>
 			<p>{children}</p>
 		</div>

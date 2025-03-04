@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Define common color types
-export type colorSelection = 'gray' | 'blue' | 'green' | 'red' | 'yellow' | 'indigo' | 'purple' | 'pink';
+export type colorSelection = 'gray' | 'blue' | 'green' | 'red' | 'yellow' | 'indigo' | 'purple' | 'pink' | 'white';
 export type colorType = 'light' | 'dark';
 export type variantType = 'success' | 'warning' | 'error' | 'info';
 
@@ -24,7 +24,7 @@ export interface BannerProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 // ButtonProps interface
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+export interface BadgeProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     children: React.ReactNode;
     color: colorSelection;
     variant: variantType;
@@ -44,4 +44,15 @@ export interface TooltipProps extends React.HTMLAttributes<HTMLDivElement> {
 // ToastProps interface
 export interface ToastProps {
     variant: variantType;
+}
+
+// Testimonials interface
+
+export interface TestimonialsProps {
+    name: string;
+    location: string;
+    icon?: React.ReactNode;
+    children: React.ReactNode;
+    img?: string;
+    color: colorSelection;
 }

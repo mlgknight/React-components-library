@@ -1,9 +1,14 @@
 import Card from './Components/Card';
-import Button from './Components/Button';
+import Badge from './Components/Badge';
 import Tooltip from './Components/Tooltip';
 import Toast from './Components/Toast';
 import Banner from './Components/Banner';
-import { AiOutlineCodepen } from 'react-icons/ai';
+import Testimonials from './Components/Testimonials';
+import { FcHome } from 'react-icons/fc';
+import testimg from '../src/assets/testimg.jpg';
+
+
+import { DiCodeigniter } from 'react-icons/di';
 
 import './App.css';
 import { colorSelection, colorType, variantType } from './types/definitions';
@@ -14,13 +19,13 @@ function App() {
 		onClick: () => console.log('Card clicked'),
 		header_text: 'Easy Deployment',
 		className: '',
-		icon: <AiOutlineCodepen />,
+		icon: <DiCodeigniter />,
 		cardColor: 'blue' as colorSelection,
 		iconColor: 'blue' as colorSelection,
 	};
 
 	// Button props
-	const buttonProps = {
+	const badgeProps = {
 		variant: 'info' as variantType,
 		color: 'blue' as colorSelection,
 		colorType: 'light' as colorType,
@@ -44,13 +49,22 @@ function App() {
 		className: '',
 	};
 
+	// Testimonials props
+	const TestimonialsProps = {
+		name: 'May Andersons',
+		location: 'Workcation, CTO',
+		icon: <FcHome />,
+		color: 'indigo' as colorSelection,
+		img: testimg
+	};
+
 	return (
 		<div className='container'>
 			<Card {...cardProps}>
 				Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna
 				sit morbi lobortis.
 			</Card>
-			<Button {...buttonProps}>Badge</Button>
+			<Badge {...badgeProps}>Badge</Badge>
 
 			<Tooltip {...toolTipProps}>
 				Lorem ipsum dolor sit amet consectetur adipisicing elit oluptatum
@@ -58,6 +72,11 @@ function App() {
 			</Tooltip>
 			<Toast {...ToastProps}></Toast>
 			<Banner {...BannerProps}></Banner>
+			<Testimonials {...TestimonialsProps}>
+				“Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo expedita
+				voluptas culpa sapiente alias molestiae. Numquam corrupti in laborum sed
+				rerum et corporis.”
+			</Testimonials>
 		</div>
 	);
 }

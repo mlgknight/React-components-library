@@ -1,10 +1,10 @@
 import '../index.css';
-import { ButtonProps } from '../types/definitions';
+import { BadgeProps } from '../types/definitions';
 
-export default function Button(props: ButtonProps) {
+export default function Badge(props: BadgeProps) {
 	const { children, color, variant, colorType, className, ...rest } = props;
 
-	let colorClass: variantType = 'light';
+	let colorClass = 'light';
 	const variantClass: string = 'button_' + variant;
 
 	if (colorType === 'dark') {
