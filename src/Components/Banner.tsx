@@ -3,9 +3,7 @@ import { FaRegCheckCircle } from 'react-icons/fa';
 import { RiErrorWarningLine } from 'react-icons/ri';
 import { HiOutlineInformationCircle } from 'react-icons/hi';
 import { VscError } from 'react-icons/vsc';
-import { BannerProps } from '../types/definitions'
-
-
+import { BannerProps } from '../types/definitions';
 
 export default function Banner(props: BannerProps) {
 	const { children, variant, className = '', ...rest } = props;

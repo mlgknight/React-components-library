@@ -1,5 +1,4 @@
-/*Color Variables section */
-
+/* Color Variables section */
 :root {
 	--gray: #f3f4f6;
 	--red: #fee2e2;
@@ -23,20 +22,29 @@
 	--icon-blue: #60a5fa;
 }
 
-/*Tooltip section */
+/* Badge section */
 
+.badge_class {
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+/* Tooltip section */
 .tooltip_class {
 	display: flex;
-	width: 384px;
-	height: 98px;
+	width: 100%;
+	max-width: 384px;
+	height: auto;
+	min-height: 98px;
 	border-radius: 8px;
 	padding: 16px;
 	background-color: #ffffff;
 	flex-direction: column;
+	margin: 0 auto;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .tooltip_class h3 {
-	font-family: Inter;
+	font-family: Inter, sans-serif;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 20px;
@@ -44,7 +52,7 @@
 }
 
 .tooltip_class p {
-	font-family: Inter;
+	font-family: Inter, sans-serif;
 	font-weight: 200;
 	font-size: 14px;
 	line-height: 20px;
@@ -92,13 +100,12 @@
 }
 
 /* Card Section */
-
 .card {
-	width: 384px;
-	height: 208px;
-	padding-right: 24px;
-	padding-bottom: 32px;
-	padding-left: 24px;
+	width: 100%;
+	max-width: 384px;
+	height: auto;
+	min-height: 208px;
+	padding: 24px;
 	border-radius: 8px;
 	background-color: #f9fafb;
 	display: flex;
@@ -107,6 +114,7 @@
 	flex-direction: column;
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
 		rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+	margin: 0 auto;
 }
 
 .card_icon {
@@ -133,7 +141,7 @@
 }
 
 .card p {
-	font-family: Inter;
+	font-family: Inter, sans-serif;
 	font-weight: 200;
 	font-size: 16px;
 	line-height: 24px;
@@ -142,7 +150,7 @@
 }
 
 .card h3 {
-	font-family: Inter;
+	font-family: Inter, sans-serif;
 	font-weight: 500;
 	font-size: 18px;
 	line-height: 28px;
@@ -150,8 +158,7 @@
 	text-align: center;
 }
 
-/*Toast section */
-
+/* Toast section */
 .toast_icon.success {
 	color: var(--icon-green);
 }
@@ -169,14 +176,18 @@
 }
 
 .toast {
-	width: 352px;
-	height: 96px;
+	width: 100%;
+	max-width: 352px;
+	height: auto;
+	min-height: 96px;
 	border-radius: 8px;
-	padding: 1.6px 16px;
+	padding: 16px;
 	display: flex;
 	flex-direction: column;
 	gap: 0;
 	justify-content: center;
+	margin: 0 auto;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .toast div {
@@ -187,7 +198,7 @@
 }
 
 .toast div h3 {
-	font-family: Inter;
+	font-family: Inter, sans-serif;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 20px;
@@ -196,7 +207,7 @@
 
 .toast_text {
 	text-align: start;
-	font-family: Inter;
+	font-family: Inter, sans-serif;
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 20px;
@@ -254,7 +265,6 @@
 }
 
 /* Darker Color Classes */
-
 .bg_dark_white {
 	background-color: #ffffff;
 	color: #262626;
@@ -300,8 +310,7 @@
 	color: var(--pink);
 }
 
-/*Button section */
-
+/* Button section */
 button {
 	width: 80px;
 	height: 32px;
@@ -310,7 +319,7 @@ button {
 	cursor: pointer;
 	border: none;
 	background-color: #f3f4f6;
-	font-family: Inter;
+	font-family: Inter, sans-serif;
 	font-weight: 500;
 	font-size: 14px;
 	line-height: 20px;
@@ -320,10 +329,6 @@ button {
 
 .button_pill {
 	border-radius: 100px;
-	-webkit-border-radius: 100px;
-	-moz-border-radius: 100px;
-	-ms-border-radius: 100px;
-	-o-border-radius: 100px;
 }
 
 .button_square {
@@ -332,26 +337,28 @@ button {
 }
 
 /* Banner section */
-
 .banner_class {
-	width: 896px;
-	height: 80px;
+	width: 100%;
+	max-width: 700px;
+	height: auto;
+	min-height: 5rem;
 	gap: 12px;
-	top: -192px;
-	left: -919px;
 	border-radius: 6px;
 	padding: 16px;
+	margin: 0 auto;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .banner_class_small {
-	width: 864px;
-	height: 40px;
+	width: 100%;
+	max-width: 864px;
+	height: auto;
+	min-height: 40px;
 	gap: 12px;
-	top: -158px;
-	left: 23px;
 	border-radius: 6px;
 	padding: 16px;
 	display: flex;
+	margin: 0 auto;
 }
 
 .banner_class div {
@@ -362,14 +369,13 @@ button {
 
 .banner_class p {
 	margin: 0 0 0 36.8px;
-	font-family: Inter;
+	font-family: Inter, sans-serif;
 	font-weight: 300;
 	font-size: 14.4px;
 	letter-spacing: 0%;
 }
 
 /* Testimonials section */
-
 .testimonials {
 	width: 672px;
 	height: 96px;
@@ -385,6 +391,8 @@ button {
 	position: relative;
 	z-index: 2;
 	gap: 16px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .dots-image {
@@ -429,6 +437,7 @@ button {
 	-moz-border-radius: 15px;
 	-ms-border-radius: 15px;
 	-o-border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .testimonials .img_style_text {
@@ -438,7 +447,28 @@ button {
 	width: 100%;
 }
 
-@media (max-width: 600px) {
+/* Container Section */
+.component-section {
+	gap: 5rem;
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+	padding: 2rem; /* Padding inside the container */
+	width: 100%; /* Take up full width of its parent */
+	max-width: 800px; /* Maximum width to prevent it from becoming too wide */
+	min-width: 300px; /* Minimum width to prevent it from becoming too small */
+	margin: 0 auto; /* Center the container horizontally */
+	box-sizing: border-box; /* Ensure padding is included in the width calculation */
+}
+
+.component-section h2 {
+	margin-bottom: 1rem;
+	color: #333;
+	font-size: 1.5rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 950px) {
 	.testimonials {
 		max-width: 12rem;
 		width: 12rem;
@@ -457,6 +487,7 @@ button {
 		height: auto;
 		position: relative;
 		bottom: 25%;
+
 	}
 
 	.testimonials .Testimonials_img {

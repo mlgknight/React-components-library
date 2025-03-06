@@ -1,7 +1,10 @@
 body {
-	background-color: rgb(139, 136, 136);
-	padding: 1.5rem;
+	padding: 10rem;
+	background-color: #ffffff;
+	opacity: 1;
+	background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 14px ), repeating-linear-gradient( #f9f9f955, #f9f9f9 );
 }
+
 
 .container {
 	display: flex;
@@ -9,5 +12,5 @@ body {
 	flex-direction: row;
 	align-content: left;
 	justify-content: left;
-	gap: 5rem;
+	gap: 3rem;
 }

@@ -1,6 +1,7 @@
 import '../index.css';
 import { BadgeProps } from '../types/definitions';
 
+
 export default function Badge(props: BadgeProps) {
 	const { children, color, variant, colorType, className, ...rest } = props;
 
@@ -16,7 +17,7 @@ export default function Badge(props: BadgeProps) {
 	}
 
 	return (
-		<button {...rest} className={`${colorClass} ${variantClass} ${className}`}>
+		<button {...rest} className={`badge_class ${colorClass} ${variantClass} ${className}`}>
 			{children}
 		</button>
 	);

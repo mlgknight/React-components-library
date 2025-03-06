@@ -3,10 +3,10 @@ import { TestimonialsProps } from '../types/definitions';
 import dots from '../assets/dots.png';
 
 export default function Testimonials(props: TestimonialsProps) {
-	const { name, location, icon, children, img, color } = props;
+	const { name, location, icon, children, img, color, ...rest } = props;
 
 	return (
-		<div className={`testimonials bg_dark_${color}`}>
+		<div {...rest} className={`testimonials bg_dark_${color}`}>
 			{color === 'white' ? (
 				<img src={dots} alt='background dot texture' className='dots-image' />
 			) : null}
@@ -24,7 +24,7 @@ export default function Testimonials(props: TestimonialsProps) {
 						</h3>
 					</div>
 				) : null}
-					<p style={img ? { textAlign: 'start' } : {}}>{children}</p>
+				<p style={img ? { textAlign: 'start' } : {}}>{children}</p>
 				{img ? (
 					<h5 className='img_style_text'>
 						{name}, <span>{location}</span>
