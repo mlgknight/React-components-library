@@ -1,7 +1,7 @@
 import '../index.css';
 import { CgClose } from 'react-icons/cg';
-import { FiInbox } from 'react-icons/fi';
 import { TooltipProps } from '../types/definitions';
+import { FiInbox } from 'react-icons/fi';
 
 export default function Tooltip(props: TooltipProps) {
 	const {
@@ -10,6 +10,7 @@ export default function Tooltip(props: TooltipProps) {
 		colorType,
 		header_text,
 		className = '',
+		icon,
 		...rest
 	} = props;
 
@@ -37,7 +38,15 @@ export default function Tooltip(props: TooltipProps) {
 		<div {...rest} className={`${colorClass} tooltip_class ${className}`}>
 			<div className='tooltip_close_icon'>
 				<div className='tooltip_header_icon_container'>
-					<FiInbox className='tooltip_icon' style={dynamicStyle[1]} />
+					{icon ? (
+						<div className='close_button' style={dynamicStyle[1]}>
+							{icon}
+						</div>
+					) : (
+						<FiInbox className='close_button' style={dynamicStyle[1]}>
+							{icon}
+						</FiInbox>
+					)}
 					<h3>{header_text}</h3>
 				</div>
 				<CgClose className='close_button' style={dynamicStyle[1]} />

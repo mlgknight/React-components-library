@@ -22,10 +22,35 @@
 	--icon-blue: #60a5fa;
 }
 
+.main_header {
+	text-align: center;
+	width: 12rem;
+	height: 2rem;
+	border-radius: 200px;
+	background-color: #33334c;
+	color: rgba(255, 255, 255, 0.717);
+	font-weight: 900;
+	background-image: radial-gradient(circle at center center, #5e5e5e, #ffffff),
+		repeating-radial-gradient(
+			circle at center center,
+			#cccccc,
+			#efefef,
+			30px,
+			transparent 20px,
+			transparent 10px
+		);
+	background-blend-mode: multiply;
+	-webkit-border-radius: 200px;
+	-moz-border-radius: 200px;
+	-ms-border-radius: 200px;
+	-o-border-radius: 200px;
+}
+
 /* Badge section */
 
 .badge_class {
-	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 /* Tooltip section */
@@ -40,7 +65,8 @@
 	background-color: #ffffff;
 	flex-direction: column;
 	margin: 0 auto;
-	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .tooltip_class h3 {
@@ -187,7 +213,8 @@
 	gap: 0;
 	justify-content: center;
 	margin: 0 auto;
-	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .toast div {
@@ -346,7 +373,8 @@ button {
 	border-radius: 6px;
 	padding: 16px;
 	margin: 0 auto;
-	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .banner_class_small {
@@ -437,7 +465,8 @@ button {
 	-moz-border-radius: 15px;
 	-ms-border-radius: 15px;
 	-o-border-radius: 15px;
-	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+	box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+		rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .testimonials .img_style_text {
@@ -487,7 +516,6 @@ button {
 		height: auto;
 		position: relative;
 		bottom: 25%;
-
 	}
 
 	.testimonials .Testimonials_img {
@@ -510,4 +538,101 @@ button {
 	.testimonials div p {
 		max-width: 100%;
 	}
+}
+
+.header_container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.header_container h1:nth-child(1) {
+	color: #355c7d;
+	font-family: 'Fira Code', monospace;
+	font-weight: 800;
+	font-size: 20px;
+	margin: 0 0 0 35%;
+	text-align: left;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 170px;
+	animation: type 2s steps(40, end) forwards;
+}
+
+.header_container h1:nth-child(2) {
+	opacity: 0;
+	font-family: 'Work Sans', sans-serif;
+	margin: 0 auto auto auto;
+	background: linear-gradient(to right, #f8b195, #f67280, #c06c84);
+	font-weight: 800;
+	font-size: 100px;
+	width: 430px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	overflow: hidden;
+	animation: shring-animation 2.2s steps(40, end) 2s forwards,
+		blink 0.5s step-end infinite alternate;
+}
+
+@keyframes shring-animation {
+	0% {
+		background-position: 0 0;
+		opacity: 0;
+		width: 0;
+	}
+	1% {
+		background-position: 0 0;
+		opacity: 1;
+		border-right: 1px solid orange;
+	}
+	50% {
+		background-position: 150px 0;
+		opacity: 1;
+		border-right: 1px solid orange;
+	}
+	100% {
+		background-position: 400px 0;
+		opacity: 1;
+		border-right: 1px solid orange;
+	}
+}
+
+@keyframes type {
+	0% {
+		width: 0;
+	}
+	1%,
+	99% {
+		border-right: 1px solid orange;
+	}
+	100% {
+		border-right: none;
+	}
+}
+
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}
+
+ul {
+	text-align: start;
+}
+
+.info_text {
+	border-right: 5px solid orange;
+	border-left: 5px solid orange;
+	padding: 1rem 0.1rem;
+	border-radius: 100px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-ms-border-radius: 100px;
+	-o-border-radius: 100px;
 }

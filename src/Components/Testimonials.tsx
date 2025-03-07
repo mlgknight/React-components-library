@@ -3,7 +3,7 @@ import { TestimonialsProps } from '../types/definitions';
 import dots from '../assets/dots.png';
 
 export default function Testimonials(props: TestimonialsProps) {
-	const { name, location, icon, children, img, color, ...rest } = props;
+	const { name, location, icon, children, img, color, header, ...rest } = props;
 
 	return (
 		<div {...rest} className={`testimonials bg_dark_${color}`}>
@@ -20,7 +20,11 @@ export default function Testimonials(props: TestimonialsProps) {
 					<div>
 						{icon}
 						<h3>
-							Work<span className={`bg_${color}`}>cation</span>
+							{header ? (
+								<span className={`bg_${color}`}>{header}</span>
+							) : (
+								<span className={`bg_${color}`}>Headercation</span>
+							)}
 						</h3>
 					</div>
 				) : null}

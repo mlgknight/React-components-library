@@ -6,7 +6,7 @@ import { VscError } from 'react-icons/vsc';
 import { ToastProps, colorSelection } from '../types/definitions'
 
 export default function Toast(props: ToastProps) {
-	const { variant, ...rest } = props;
+	const { variant, children, ...rest } = props;
 
 	let colorClass : colorSelection
 
@@ -39,7 +39,8 @@ export default function Toast(props: ToastProps) {
 		iconholder = (
 			<HiOutlineInformationCircle className='toast_icon toast_icon info' />
 		);
-	} else {
+	}
+	 else {
 		throw new Error('Invalid variant');
 	}
 
@@ -49,7 +50,7 @@ export default function Toast(props: ToastProps) {
 				{iconholder}
 				<h3>{cardText}</h3>
 			</div>
-			<p className='toast_text'>{cardInner}</p>
+			<p className='toast_text'>{children ? children : cardInner}</p>
 		</div>
 	);
 }

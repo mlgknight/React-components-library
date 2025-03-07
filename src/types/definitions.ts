@@ -44,6 +44,7 @@ export interface TooltipProps extends React.HTMLAttributes<HTMLDivElement> {
 // ToastProps interface
 export interface ToastProps {
     variant: variantType;
+    children?: React.ReactNode;
 }
 
 // Testimonials interface
@@ -55,4 +56,5 @@ export interface TestimonialsProps {
     children: React.ReactNode;
     img?: string;
     color: colorSelection;
+    header?: string;
 }
